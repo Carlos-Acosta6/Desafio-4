@@ -1,0 +1,353 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    grid-template-columns: 1fr;
+    background-color: #F8F5FD;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+    max-width: 1200px;
+
+}
+
+
+.cabecera {
+    text-align: center;
+}
+
+
+.cabecera h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #4C2A63;
+    letter-spacing: -1.2px;
+    line-height: 0.95;
+    margin-bottom: 20px;
+
+}
+
+.cabecera p {
+    font-size: 1.5rem;
+    font-weight: 530;
+    letter-spacing: -0.7px;
+    color: #7A7385;
+}
+
+.container-flex,
+.puntuaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 45px;
+}
+
+.rating {
+    background-color: #F4ECF8;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.rating img {
+    display: inline-block;
+    max-width: auto;
+    height: 120px;
+    line-height: -2;
+}
+
+.rating p {
+    position: relative;
+    top: -30px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #4C2A63;
+    letter-spacing: 0.3px;
+
+}
+
+/*CARD*/
+
+.card {
+    padding: 30px;
+    background-color: #6F2C6B;
+    border-radius: 1rem;
+}
+
+.images {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.images img {
+    display: inline-block;
+    max-width: 40px;
+    width: 100%;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.card>p {
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.info h2 {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 450;
+
+}
+
+.info p {
+    font-size: 1.6rem;
+    color: #E47CC6;
+    font-weight: 450;
+}
+
+/*TABLETS*/
+
+
+@media screen and (min-width: 769px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 50px 20px;
+
+    }
+
+    .cabecera {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+
+    .cabecera h1 {
+        font-size: 4.5rem;
+        text-align: left;
+        margin-bottom: 25px;
+        padding-right: 10px;
+    }
+
+    .cabecera p {
+        font-size: 1.7rem;
+        text-align: left;
+    }
+
+    .container-flex {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .container-flex {
+        grid-column: 1 / span 3;
+    }
+
+
+    .card:first-child {
+        grid-column: 1;
+
+
+    }
+
+    .card:nth-child(2) {
+        grid-column: 2;
+        position: relative;
+        top: 2.5rem;
+
+    }
+
+    .card:last-child {
+        position: relative;
+        top: 5rem;
+        grid-column: 3;
+    }
+
+    .puntuaciones {
+        grid-column: 2 / span 3;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #F4ECF8;
+        width: 450px;
+        border-radius: 10px;
+        gap: 20px;
+    }
+
+    .rating img {
+        display: inline-block;
+        max-width: auto;
+        height: 85px;
+    }
+
+    .rating p {
+        display: inline-block;
+        position: none;
+        top: 0;
+        font-size: 1.7rem;
+        align-content: center;
+    }
+
+    .rating:first-child {
+
+        align-self: flex-start;
+    }
+
+    .rating:last-child {
+        align-self: flex-end;
+    }
+
+}
+
+/*Escritorio*/
+
+@media screen and (min-width: 1280px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 50px 20px;
+        max-width: 1400px;
+
+    }
+
+    .cabecera {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+
+    .cabecera h1 {
+        font-size: 5.5rem;
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    .cabecera p {
+        font-size: 1.8rem;
+        text-align: left;
+    }
+
+    .container-flex {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .container-flex {
+        grid-column: 1 / span 3;
+    }
+
+
+    .card:first-child {
+        grid-column: 1;
+
+
+    }
+
+    .card:nth-child(2) {
+        grid-column: 2;
+        position: relative;
+        top: 2.5rem;
+
+    }
+
+    .card:last-child {
+        position: relative;
+        top: 5rem;
+        grid-column: 3;
+
+    }
+
+
+    .puntuaciones {
+        grid-column: 2 / span 3;
+        margin-top: 0;
+        align-items: center;
+        padding: 0 3rem;
+
+    }
+
+
+    .rating {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #F4ECF8;
+        width: 450px;
+        border-radius: 10px;
+        gap: 20px;
+
+    }
+
+    .rating img {
+        display: inline-block;
+        max-width: auto;
+        height: 100px;
+    }
+
+    .rating p {
+        display: inline-block;
+        position: none;
+        top: 0;
+        font-size: 1.8rem;
+        align-content: center;
+    }
+
+    .rating:first-child {
+
+        align-self: flex-start;
+    }
+
+    .rating:last-child {
+        align-self: flex-end;
+    }
+
+    .card>p {
+        font-size: 1.6rem;
+        color: white;
+    }
+
+    .info h2 {
+        font-size: 2rem;
+    }
+
+    .info p {
+        font-size: 1.7rem;
+    }
+
+}
